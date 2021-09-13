@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        crossorigin="anonymous" />
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+    <header class="d-flex sticky-top">
+        <div class="d-flex search border-end pe-3 ps-0 py-2 bg-white">
+            <button class="btn">
+                <i class="fas fa-bars"></i>
+            </button>
+            <input type="text" placeholder="Поиск" class="form-control border-0" id="inputSearch" onkeyup="find()">
+        </div>
+        <div class="d-flex align-items-center justify-content-between chat-name border-bottom px-3 d-none" id="o">
+            <div>
+                <h6 class="m-0" id="chatName">Ustoz-shogird</h6>
+                <small class="m-0 text-muted">13 596 подписчиков</small>
+            </div>
+            <div class="d-flex align-items-center">
+                <button class="btn">
+                    <i class="fas fa-search"></i>
+                </button>
+                <button class="btn">
+                    <i class="far fa-window-maximize"></i>
+                </button>
+                <button class="btn">
+                    <i class="fas fa-ellipsis-v"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+    <div class="container-fluid d-flex p-0">
+        <div class="list-group border-end rounded-0" id="contacts">
+            <a href="#" class="list-group-item list-group-item-action d-flex align-items-center p-2 border-0">
+                <div class="rounded-circle av-box me-3">
+                    <img src="./images/ava.jpg" alt="?">
+                </div>
+                <div class="texts">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <span class="fw-bold"><i class="fas fa-users text-dark"></i> PDP g92</span>
+                        <small class="text-muted">19:50</small>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <span>
+                            <span class="text-primary">Sardor</span>: uy ishi
+                            qildingmi?</span>
+                        <span class="badge bg-primary">10</span>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="chat p-3" id="chatBlock">
+            <div class="d-flex align-items-end my-2">
+                <div class="rounded-circle av-box me-3">
+                    <img src="./images/ava.jpg" alt="?">
+                </div>
+                <div class="bg-white p-3 msg">
+                    <p class="text-primary m-0">M.X</p>
+                    <p class="m-0">sass dan tekshirvoman baribir o`zgarmayapti css ga tushgan</p>
+                </div>
+            </div>
+            <div class="bg-white send p-0 d-flex align-items-center">
+                <button class="btn py-2 px-3">
+                    <i class="fas fa-paperclip fs-4"></i>
+                </button>
+                <div class="text-block py-2">
+                    <textarea placeholder="Написать сообщение" class="border-0 w-100" id="sendMsg"
+                        onkeyup="changeIcon()"></textarea>
+                </div>
+                <button class="btn py-2 px-3" id="sendMsgButton" onclick="getMsg()">
+                    <i class="fab fa-telegram-plane text-primary"></i>
+                </button>
+                <button class="btn py-2 px-3">
+                    <i class="far fa-smile fs-4"></i>
+                </button>
+                <button class="btn py-2 px-3">
+                    <i class="fas fa-microphone fs-4"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+        crossorigin="anonymous"></script>
+    <script src="./js/main.js"></script>
+</body>
+
+</html>
